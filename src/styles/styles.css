@@ -1,0 +1,11 @@
+body{
+  margin-top: 50px !important;
+}
+
+.navbar {
+  border-radius: 0px;
+}
+
+a.active {
+  font-weight: 'bold' !important;
+}
