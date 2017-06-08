@@ -2,13 +2,14 @@ import 'babel-polyfill';
 import React from 'react';
 import { render } from 'react-dom';
 import { Router, browserHistory } from 'react-router';
-import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-
+import configureStore from './store/configureStore';
 import routes from './routes';
 import './styles/styles.css';
+import { loadCourses } from './actions/courseActions';
 
-const store = createStore();
+const store = configureStore();
+store.dispatch(loadCourses());
 
 render(
   <Provider store={store}>
